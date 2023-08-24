@@ -1,9 +1,6 @@
 const fibs = (num) => {
-  if (num <= 0) {
-    return 'Please enter a number bigger than 0'
-  } else if (num <= 2) {
-    return num === 1 ? [0] : [0, 1]
-  }
+  if (num <= 0) return 'Please enter a number bigger than 0'
+  if (num <= 2) return num === 1 ? [0] : [0, 1]
   const fibs_arr = [0, 1]
   for (let i = 0; i < num - 2; i++) {
     const element =
@@ -13,5 +10,4 @@ const fibs = (num) => {
   return fibs_arr
 }
 
-const numbersToTry = [0, 1, 2, 4, 8, 16, 32, 64]
-numbersToTry.forEach((num) => console.log(fibs(num)))
+module.exports = { fibs }
