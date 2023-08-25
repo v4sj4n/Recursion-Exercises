@@ -1,6 +1,6 @@
 const fibs = (num) => {
-  if (num <= 0) return 'Please enter a number bigger than 0'
-  if (num <= 2) return num === 1 ? [0] : [0, 1]
+  if (num < 1 || !Number.isInteger(num)) return 'Please enter a positive number'
+  if (num < 3) return num === 1 ? [0] : [0, 1]
   const fibs_arr = [0, 1]
   for (let i = 0; i < num - 2; i++) {
     const element =
